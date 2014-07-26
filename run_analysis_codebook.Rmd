@@ -8,14 +8,31 @@ output: html_document
 USAGE
 =======
 
-The file (run_analysis.R) assumes it is sourced within a working directory which is the uncompressed contents of the UCI HAR Dataset.
+The file (run_analysis.R) assumes it is sourced within a working directory which is the
+uncompressed contents of the UCI HAR Dataset.
+
+DESCRIPTION
+===========
+
+The file (run_analysis.R) performs a series of steps in order to compile and then clean
+and organize the UCI HAR Dataset. Simply, these are as follows:
+  1. Load all files into memory.
+  2. Correct column names.
+  3. Replace activity id with activity names.
+  4. Combine files into a single dataset.
+  5. Reduce redundant data using the "melt" command combining multiple measures by calculating
+     the mean of values.
+  6. Reformat the dataset for easy presentation.
+  7. Output the file.
+
 
 OUTPUT
 =======
 
 The script outputs a file called “finalOutput.txt”.
 
-The file contains a series of columns with rows of mean values derived from the raw data. The names of these columns are:
+The file contains a series of columns with rows of mean values derived from the raw data.
+The names of these columns are:
 
 "subjectid"
 "activityname"
